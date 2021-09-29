@@ -1,6 +1,7 @@
 :root {
   --dark: rgb(44, 43, 43);
-  --light: #fff;
+  --light: #f3e7d9;
+  --white: #fff;
 }
 
 @media screen and (max-width: 39rem) {
@@ -9,9 +10,13 @@
   }
 }
 
+body {
+  background-color: var(--light);
+}
+
 button {
   color: var(--dark);
-  background: var(--light);
+  background: var(--white);
   border: var(--dark);
   border-radius: 4px;
   padding: 6px 16px;
@@ -28,7 +33,7 @@ button {
 
 .dark-mode {
   background: var(--dark);
-  color: var(--light);
+  color: var(--white);
 }
 
 .dark-mode section {
@@ -41,7 +46,7 @@ button {
   background-color: var(--dark);
   width: 100%;
   padding: 1rem;
-  color: var(--light);
+  color: var(--white);
   text-align: center;
 }
 

@@ -10,19 +10,16 @@ darkModeButton.addEventListener(
 );
 
 const bottomBar = document.querySelector(".bottom-bar");
-const bottomBarButton = document.querySelector(".bottom-bar-button");
 
-bottomBarButton.addEventListener(
-  "click",
+window.addEventListener(
+  "scroll",
   () => {
-    if (
-      bottomBar.classList.contains("slideOut") ||
-      bottomBar.classList.contains("slideIn")
-    ) {
-      bottomBar.classList.toggle("slideOut");
-      bottomBar.classList.toggle("slideIn");
+    if (window.scrollY === 0) {
+      bottomBar.classList.add("slideIn");
+      bottomBar.classList.remove("slideOut");
     } else {
-      bottomBar.classList.toggle("slideOut");
+      bottomBar.classList.add("slideOut");
+      bottomBar.classList.remove("slideIn");
     }
   },
   false

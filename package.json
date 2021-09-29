@@ -1,0 +1,31 @@
+{
+  "name": "pwa-playground",
+  "version": "1.0.0",
+  "description": "An app for experimenting with and learning web development",
+  "main": "service-worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobStephens2/playground.git"
+  },
+  "keywords": [
+    "progressive-web-app"
+  ],
+  "author": "Jacob Stephens",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/JacobStephens2/playground/issues"
+  },
+  "homepage": "https://github.com/JacobStephens2/playground#readme",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.1.2"
+  }
+}

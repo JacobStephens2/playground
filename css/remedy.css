@@ -9,7 +9,6 @@ note: |
 category: file
 */
 
-
 /* @docs
 label: Box Sizing
 
@@ -18,8 +17,11 @@ note: |
 
 category: global
 */
-*, ::before, ::after { box-sizing: border-box; }
-
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 /* @docs
 label: Line Sizing
@@ -33,8 +35,9 @@ links:
 
 category: global
 */
-html { line-sizing: normal; }
-
+html {
+  line-height: normal;
+}
 
 /* @docs
 label: Body Margins
@@ -44,8 +47,9 @@ note: |
 
 category: global
 */
-body { margin: 0; }
-
+body {
+  margin: 0;
+}
 
 /* @docs
 label: Heading Sizes
@@ -55,13 +59,30 @@ note: |
 
 category: typography
 */
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.17rem; }
-h4 { font-size: 1.00rem; }
-h5 { font-size: 0.83rem; }
-h6 { font-size: 0.67rem; }
+h1 {
+  font-size: 2rem;
+  margin: 0.67em 0;
+}
 
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
 
 /* @docs
 label: H1 Margins
@@ -71,8 +92,6 @@ note: |
 
 category: typography
 */
-h1 { margin: 0.67em 0; }
-
 
 /* @docs
 label: Pre Wrapping
@@ -82,8 +101,9 @@ note: |
 
 category: typography
 */
-pre { white-space: pre-wrap; }
-
+pre {
+  white-space: pre-wrap;
+}
 
 /* @docs
 label: Horizontal Rule
@@ -103,7 +123,6 @@ hr {
   overflow: visible;
 }
 
-
 /* @docs
 label: Responsive Embeds
 
@@ -114,12 +133,17 @@ note: |
 
 category: embedded elements
 */
-img, svg, video, canvas, audio, iframe, embed, object {
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: block;
-  vertical-align: middle;
   max-width: 100%;
 }
-
 
 /* @docs
 label: Aspect Ratios
@@ -132,10 +156,12 @@ note: |
 
 category: embedded elements
 */
-img, svg, video, canvas {
+img,
+svg,
+video,
+canvas {
   height: auto;
 }
-
 
 /* @docs
 label: Audio Width
@@ -146,8 +172,9 @@ note: |
 
 category: embedded elements
 */
-audio { width: 100%; }
-
+audio {
+  width: 100%;
+}
 
 /* @docs
 label: Image Borders
@@ -157,8 +184,9 @@ note: |
 
 category: legacy browsers
 */
-img { border-style: none; }
-
+img {
+  border-style: none;
+}
 
 /* @docs
 label: SVG Overflow
@@ -168,8 +196,9 @@ note: |
 
 category: legacy browsers
 */
-svg { overflow: hidden; }
-
+svg {
+  overflow: hidden;
+}
 
 /* @docs
 label: HTML5 Elements
@@ -179,10 +208,18 @@ note: |
 
 category: legacy browsers
 */
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
-
 
 /* @docs
 label: Checkbox & Radio Inputs
@@ -193,8 +230,8 @@ note: |
 
 category: legacy browsers
 */
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }

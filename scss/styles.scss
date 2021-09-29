@@ -23,11 +23,6 @@ body {
   }
 }
 
-.dark-mode {
-  background: var(--dark);
-  color: var(--white);
-}
-
 button {
   color: var(--dark);
   background: var(--white);
@@ -35,4 +30,9 @@ button {
   border-radius: var(--border-radius);
   padding: var(--button-padding);
   box-shadow: var(--box-shadow);
+}
+
+.dark-mode {
+  background: var(--dark);
+  color: var(--white);
 }

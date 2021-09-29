@@ -1,9 +1,21 @@
-
+# Bluehost.com
+# .htaccess main domain to subdirectory redirect
+# Do not change this line.
 RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^playground\.stewardgoods\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.playground\.stewardgoods\.com$
-RewriteRule ^(.*)$ "https\:\/\/playground\.stewardgoods\.com\/$1" [R=301,L]
+# Change example.com to be your main domain.
+RewriteCond %{HTTP_HOST} ^(www.)?computer-text-blog.stewardgoods.com$
+# Change 'subdirectory' to be the directory you will use for your main domain.
+RewriteCond %{REQUEST_URI} !^public/
+# Don't change the following two lines.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Change 'subdirectory' to be the directory you will use for your main domain.
+RewriteRule ^(.*)$ public/$1
+# Change example.com to be your main domain again.
+# Change 'subdirectory' to be the directory you will use for your main domain
+# followed by / then the main file for your site, index.php, index.html, etc.
+RewriteCond %{HTTP_HOST} ^(www.)?computer-text-blog.stewardgoods.com$
+RewriteRule ^(/)?$ public/index.php [L]
 
-ErrorDocument 404 /errorpage.html
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://computer-text-blog.stewardgoods.com/public/$1 [R,L]

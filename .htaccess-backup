@@ -1,0 +1,9 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^playground\.stewardgoods\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.playground\.stewardgoods\.com$
+RewriteRule ^(.*)$ "https\:\/\/playground\.stewardgoods\.com\/$1" [R=301,L]
+
+ErrorDocument 404 /errorpage.html

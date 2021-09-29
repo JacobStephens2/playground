@@ -15,7 +15,15 @@ const bottomBarButton = document.querySelector(".bottom-bar-button");
 bottomBarButton.addEventListener(
   "click",
   () => {
-    bottomBar.classList.toggle("fade");
+    if (
+      bottomBar.classList.contains("slideOut") ||
+      bottomBar.classList.contains("slideIn")
+    ) {
+      bottomBar.classList.toggle("slideOut");
+      bottomBar.classList.toggle("slideIn");
+    } else {
+      bottomBar.classList.toggle("slideOut");
+    }
   },
   false
 );

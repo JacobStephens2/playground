@@ -53,3 +53,52 @@ button {
 .fade {
   display: none;
 }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+  }
+  100% {
+    bottom: -50px;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+  }
+  100% {
+    bottom: -50px;
+  }
+}
+
+.slideOut {
+  -webkit-animation-name: slideOut;
+  animation-name: slideOut;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}

@@ -1,12 +1,19 @@
 :root {
   --dark: rgb(44, 43, 43);
   --white: #fff;
+  --max-width: 38rem;
 }
 
 body {
-  max-width: 600px;
+  max-width: var(--max-width);
   margin: auto;
   color: var(--dark);
+}
+
+@media screen and (max-width: 39rem) {
+  body {
+    padding: 0 1rem;
+  }
 }
 
 .dark-mode {
@@ -20,6 +27,8 @@ button {
   border: var(--dark);
   border-radius: 4px;
   padding: 6px 16px;
-  box-shadow: rgb(0 0 0 / 20%) 0 2px 4px -1px, rgb(0 0 0 / 14%) 0 4px 5px 0,
-    rgb(0 0 0 / 12%) 0 1px 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px -1px, rgba(0, 0, 0, 0.14) 0 4px 5px 0,
+    rgba(0, 0, 0, 0.12) 0 1px 10px 0;
 }
+
+/*# sourceMappingURL=styles.css.map */
